@@ -1,0 +1,71 @@
+@import "./src/index";
+
+.user-card{
+  margin: 10px 10px;
+  min-width: 300px;
+  width:30%;
+  min-height: 200px;
+  border-radius: 10px;
+  background: $light;
+  color: $dark;
+  -webkit-transition:  -webkit-transform 0.3s;
+  transition:  transform 0.3s;
+  &:hover{
+    background: $accentColor;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 1200px) {
+  .user-card{
+    width:45%;
+  }
+}
+@media (max-width: 1000px) {
+  .user-card{
+    width:80%;
+  }
+}
+.user-icon{
+  width: 25px;
+  margin-right: 5px;
+}
+.user-data{
+  padding: 20px;
+}
+.sub-data{
+  font-family: 'Nunito Sans',serif;
+  margin: 10px 5px 15px 15px;
+}
+.sub-data b{
+  margin: 0 5px 0 0;
+}
+.sub-data div{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+.buttons-cont{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.buttons-cont button{
+  margin: 0 $smallGap;
+  width: 40%;
+  padding: $smallGap 0;
+  border: 0;
+  border-radius: 8px;
+  background: $secondary;
+  font-family: "Lucida Sans Unicode", serif;
+  font-weight: bold;
+  -webkit-transition:  background-color 0.3s;
+  transition: background-color 0.3s;
+  &:hover{
+    background: $accentColor;
+    cursor: pointer;
+  }
+}

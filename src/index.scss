@@ -1,0 +1,17 @@
+$light: #ffffff;
+$dark: rgb(0, 0, 0);
+$modalBackground: rgba(0, 0, 0, 0.27);
+$secondary: #C7DDFF;
+$secondaryHover: #6ca4ff;
+$accentColor: #b1c0fa;
+
+$smallGap: 10px;
+$largeGap: 20px;
+
+html,body{
+  background: $secondary;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans Unicode", serif;
+}
+

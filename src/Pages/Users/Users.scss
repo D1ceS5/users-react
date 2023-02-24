@@ -1,0 +1,10 @@
+@import "./src/index";
+
+.users-wrapper{
+  position: relative;
+  background: $secondary;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

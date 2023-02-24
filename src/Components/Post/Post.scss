@@ -1,0 +1,22 @@
+@import "./src/index";
+
+.post-container{
+  margin: $smallGap;
+  padding: $largeGap;
+  width: 80%;
+  border-radius: 10px;
+  background: $light;
+  -webkit-transition:  -webkit-transform 0.3s;
+  transition:  transform 0.3s;
+  &:hover{
+    background: $accentColor;
+    transform: scale(1.05);
+  }
+  font-family: 'Nunito Sans',serif;
+}
+
+.post-title{
+  padding: 0 0 10px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+}

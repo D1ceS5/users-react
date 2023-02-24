@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Users from "./Pages/Users/Users";
+import {useSelector,useDispatch} from "react-redux";
 
+import {useEffect} from "react";
+import {fetchUsers} from "./State/Reducers/usersReducer";
+import Header from "./Components/Header/Header";
+import Posts from "./Pages/Posts/Posts";
 function App() {
+    const {users} = useSelector((state)=>state);
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+      if(!users || users.length === 0) dispatch(fetchUsers())
+    },[users])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+          <BrowserRouter>
+              <Header></Header>
+
+              <Routes>
+                  <Route path="/" element={<Users />}/>
+                  <Route path="/users" element={<Users />}/>
+                  <Route path="/:uid/posts" element={<Posts />}/>
+                  <Route path="*" element={<Users />}/>
+              </Routes>
+          </BrowserRouter>
+      </>
+
   );
 }
 

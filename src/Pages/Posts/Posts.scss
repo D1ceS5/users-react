@@ -1,0 +1,24 @@
+@import "./src/index";
+
+.posts-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: $secondary;
+
+}
+.back-btn{
+  font-family: "Nunito Sans",serif;
+  font-weight: bold;
+  margin: $smallGap calc(10% - $largeGap);
+  padding: $smallGap $largeGap;
+  border: 0;
+  border-radius: $smallGap;
+  background: $light;
+  &:hover{
+    cursor: pointer;
+    background: $accentColor;
+  }
+}

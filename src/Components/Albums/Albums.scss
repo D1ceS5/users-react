@@ -1,0 +1,45 @@
+@import "./src/index";
+
+.modal-container{
+  margin-top: -8vh;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: $modalBackground;
+  display: flex;
+}
+.modal-content{
+  border-radius: 10px;
+  width: 70%;
+  min-width: 300px;
+  height: 80%;
+  background: white;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.close-icon{
+  width: 25px;
+  position: absolute;
+  top: $smallGap;
+  cursor: pointer;
+  right: $smallGap;
+}
+.album-list{
+  width: 90%;
+  margin: $largeGap 0;
+}
+.album{
+  background: $secondary;
+  padding: $smallGap;
+  margin: $smallGap;
+  border-radius: 8px;
+  &:hover{
+    background: $accentColor;
+  }
+}
+.hidden{
+  display: none;
+}
